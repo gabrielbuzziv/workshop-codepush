@@ -6,7 +6,7 @@ import styles from './styles';
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Workshop CodePush</Text>
+      <Text style={styles.title}>Workshop CodePush</Text>
     </View>
   );
 }
