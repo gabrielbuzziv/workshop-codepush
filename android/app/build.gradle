@@ -154,8 +154,14 @@ android {
     buildTypes {
         debug {
             signingConfig signingConfigs.debug
+            buildConfigField "String", "CODEPUSH_KEY", '""'
+        }
+        staging {
+          buildConfigField "String", "CODEPUSH_KEY", '"1eNq_TbBixGtwocPk1l40mWtU39J5I7V7tvdp"'
+          matchingFallbacks = ['release']
         }
         release {
+            buildConfigField "String", "CODEPUSH_KEY", '"jmoEpxz5bSgyg7ICbt5m8Czmy9R2FfMswC61C"'
             // Caution! In production, you need to generate your own keystore file.
             // see https://facebook.github.io/react-native/docs/signed-apk-android.
             signingConfig signingConfigs.debug
